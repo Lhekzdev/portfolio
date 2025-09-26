@@ -12,14 +12,13 @@ const Portfolio = () => {
   const images = [
 
     { name:"v1758264820/Agro_-project-1_eo5uv6.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
-    {name:"v1758264688/Alvent_site_7_oyaxe0.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita " },
-    { name:"v1758264685/sporting_site_6_tze156.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
+    {name:"v1758264688/Alvent_site_7_oyaxe0.png", text:"Modern homepage showcasing featured events with responsive design, intuitive navigation, and an engaging user experience " },
+    { name:"v1758264685/sporting_site_6_tze156.png", text:"Full-stack Firebase clothing e-commerce app showcasing collections, authentication, responsive design, and seamless navigation" },
     { name:"v1758264821/Agro-tech-2_xn65ji.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
-    { name:"v1758264687/alvent_site_9_k3g61h.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
-    {name:"v1758264688/sporting_site_3_pfpwua.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
-    {name:"v1758264957/Screenshot_20250919_072730_Gmail_ugezph.jpg", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita"},
+    { name:"v1758264687/alvent_site_9_k3g61h.png", text:"Sign-up page developed with MongoDB backend integration, secure authentication, and responsive validation for seamless onboarding." },
+    {name:"v1758264688/sporting_site_3_pfpwua.png", text:"Dynamic Firebase product display highlighting sporting kits with images, prices, and cart management using Context API."},
     {name:"v1758264685/alvent_site_8_cg8a1m.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
-    {name:"v1758264686/sporting_site_5_d0i4nu.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" }
+    {name:"v1758264686/sporting_site_5_d0i4nu.png", text:"Event creation page integrated with MongoDB, enabling users to efficiently add, manage, and publish events." }
 
 
 

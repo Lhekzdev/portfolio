@@ -39,9 +39,9 @@ const Navbar =({darkMode,setDarkMode,isOpen,setIsOpen})=>{
     <li > <a href="#portfolio"  className="hover:text-blue-500 cursor-pointer">Portfolio </a></li>
     <li><a href="#AboutMe" className="hover:text-blue-500 cursor-pointer">About </a> </li>
     <li><a href="#skills"  className="hover:text-blue-500 cursor-pointer">Skills </a></li>
-    <li><Link to ="Projects"className="hover:text-blue-500 cursor-pointer">Projects </Link> </li>
-    <li><Link to="/Experience" className="hover:text-blue-500 cursor-pointer">Experience </Link> </li>
-    <li><Link to ="/Contact" className="hover:text-blue-500 cursor-pointer">Contact </Link> </li>
+    <li><Link to ="#Projects"className="hover:text-blue-500 cursor-pointer">Projects </Link> </li>
+    <li><Link to="#Experience" className="hover:text-blue-500 cursor-pointer">Experience </Link> </li>
+    <li><Link to ="#Contact" className="hover:text-blue-500 cursor-pointer">Contact </Link> </li>
 
   </ul>
   <div className="md:hidden">
@@ -58,9 +58,9 @@ const Navbar =({darkMode,setDarkMode,isOpen,setIsOpen})=>{
     <a   href="#home"  onClick={()=>{setIsOpen(false)}}   className="hover:text-blue-500 cursor-pointer">Home </a>
     <a href="#aboutMe" onClick={()=>{setIsOpen(false)}} className="hover:text-blue-500 cursor-pointer">About  </a>
     <a href="#skills" onClick={()=>{setIsOpen(false)}}  className="hover:text-blue-500 cursor-pointer">Skills </a>
-    <li><Link to ="Projects" onClick={()=>{setIsOpen(false)}} className="hover:text-blue-500 cursor-pointer">Projects </Link> </li>
-    <li><Link to="/Experience" onClick={()=>{setIsOpen(false)}}  className="hover:text-blue-500 cursor-pointer">Experience </Link> </li>
-    <li><Link to ="/Contact" onClick={()=>{setIsOpen(false)}}  className="hover:text-blue-500 cursor-pointer">Contact </Link> </li>
+    <li><Link to ="#Projects" onClick={()=>{setIsOpen(false)}} className="hover:text-blue-500 cursor-pointer">Projects </Link> </li>
+    <li><Link to="#Experience" onClick={()=>{setIsOpen(false)}}  className="hover:text-blue-500 cursor-pointer">Experience </Link> </li>
+    <li><Link to ="#Contact" onClick={()=>{setIsOpen(false)}}  className="hover:text-blue-500 cursor-pointer">Contact </Link> </li>
 
   
 </ul>
