@@ -1,0 +1,75 @@
+import React, { useState } from "react";
+
+
+const Portfolio = () => {
+
+
+
+
+  const baseUrl = "https://res.cloudinary.com/dzyvwxh7n/image/upload/"
+
+
+  const images = [
+
+    { name:"v1758264820/Agro_-project-1_eo5uv6.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
+    {name:"v1758264688/Alvent_site_7_oyaxe0.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita " },
+    { name:"v1758264685/sporting_site_6_tze156.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
+    { name:"v1758264821/Agro-tech-2_xn65ji.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
+    { name:"v1758264687/alvent_site_9_k3g61h.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
+    {name:"v1758264688/sporting_site_3_pfpwua.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
+    {name:"v1758264957/Screenshot_20250919_072730_Gmail_ugezph.jpg", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita"},
+    {name:"v1758264685/alvent_site_8_cg8a1m.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" },
+    {name:"v1758264686/sporting_site_5_d0i4nu.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci expedita" }
+
+
+
+
+
+
+  ]
+
+
+  return (
+
+    <div className=" bg-gradient-to-r  px-10  py-10 bg-[hsl(172,90%,69%)] p-6 rounded shadow " >
+      <div className="rounded-lg flex flex-col gap-y-5 shadow-2xl py-6"  >
+
+        <div className="text-[25px] mx-auto bg-gray-900 px-5  rounded-full   w-[250px] py-2">
+          <h2 className=" text-white text-center items-center   font-bold">Portfolio</h2>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4  px-5   ">
+
+
+
+
+          {images.map((img, i) => (
+
+
+            <div
+              key={i}
+              className="relative w-full h-48 flex items-center text-center justify-center bg-gray-100 rounded overflow-hidden group"
+            >
+              <img
+                src={baseUrl + img.name}
+                alt={`img-${i}`}
+                className="max-h-full  max-w-full object-contain"
+              />
+                     {/* Text overlay (appears on hover) */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="text-white text-lg font-bold">{img.text}</span>
+          </div>
+         
+            </div>
+
+            
+            
+          ))}
+
+       
+        </div>
+
+      </div>
+    </div>
+  );
+}
+export default Portfolio;
