@@ -5,7 +5,7 @@ const Footer = () => {
 
   const navigate =useNavigate()
   return (
-    <footer className="bg-gray-900 h-auto text-gray-300  py-6">
+    <footer className="bg-gray-500 h-auto text-gray-300  py-6">
       <div className="max-w-6xl mx-auto px-4 text-center flex-row   items-center justify-between">
         
    
@@ -21,8 +21,16 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/aduraleke-olaseinde-b35621205" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <FaLinkedin className="hover:text-white transition" />
           </a>
-          <a  aria-label="Email">
-            <FaEnvelope onClick={()=>{navigate("/Contact")}} className="hover:text-white transition" />
+
+
+
+
+
+
+          <a  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+           aria-label="Email">
+            <FaEnvelope 
+             className="hover:text-white transition" />
           </a>
         </div>
    

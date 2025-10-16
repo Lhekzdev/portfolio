@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import Skills from "../Skills.jsx";
-import Experience from "../experience/Experience .jsx";
+import Experience from "../experience/Experience.jsx";
 import AboutMe from "../aboutMe/AboutMe.jsx";
 
 // import Portfolio from "../portfolio/Portfolio.jsx";
@@ -64,7 +64,7 @@ const LandingPage = () => {
         <Skills />
       </section>
 
-      <section id ="">
+      <section id ="experience">
         < Experience />
       </section>
 

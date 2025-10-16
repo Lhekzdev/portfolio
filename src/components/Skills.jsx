@@ -1,13 +1,13 @@
 const Skills = () => {
     return (
  <section  className="bg-[hsl(172,90%,69%)] flex flex-col gap-y-9  px-10  py-10 h-auto  dark:bg-gray-900">
-        <div className="w-full px-4  md:h-auto  relative flex gap-y-11 flex-col rounded-lg shadow-2xl py-6  dark:bg-gray-900">
-            <div className="text-[25px] mx-auto bg-gray-900 px-5  rounded-full   w-[250px] py-2">
+        <div className="w-full px-4  md:h-auto  relative flex md:gap-y-11 flex-col rounded-lg shadow-2xl py-6  dark:bg-gray-900">
+            <div className="text-[25px] mx-auto bg-gray-500    rounded-full   w-[250px] py-2">
          <h2 className=" text-white text-center items-center   font-bold">Skills</h2>
          </div>
                   
             {/* <h2 className="font-bold text-center text-[50px]">Skills</h2> */}
-  <div className="  justify-items-center  py-9">
+  <div className="  justify-items-center  py-7">
   
     {/* Frontend */}
 <h1 className="text-[20px]  text-center font-bold">frontend</h1>
@@ -18,7 +18,7 @@ const Skills = () => {
       
    
 
-    <div className="grid md:grid-cols-3 gap-24 text-6xl p-6">
+    <div className="grid md:grid-cols-3 md:gap-24 gap-10 text-6xl p-6">
 
       {/* Tailwind */}
       <div className="flex flex-col items-center">
@@ -89,7 +89,7 @@ const Skills = () => {
      <h1 className="text-[20px] text-center font-bold">Backend</h1>
     
      
-<div className="grid md:grid-cols-3 lg:grid-cols-4 items-center gap-10 text-6xl p-6">
+<div className="grid md:grid-cols-3 lg:grid-cols-4 items-center md:gap-10 gap-5 text-6xl p-6">
       {/* Node.js */}
       <div className="flex flex-col items-center">
         <i className="devicon-nodejs-plain colored"></i>
