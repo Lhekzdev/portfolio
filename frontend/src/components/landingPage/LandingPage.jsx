@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import Skills from "../Skills.jsx";
+import Skills from "../Skills.jsx"; 
 import Experience from "../experience/Experience.jsx";
 import AboutMe from "../aboutMe/AboutMe.jsx";
 
