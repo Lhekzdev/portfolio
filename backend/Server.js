@@ -5,8 +5,8 @@ import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 
-// import uploadRoute from "./routes/uploadRoute.js";
-// import contactRoutes from "./routes/Contact.js";
+import uploadRoute from "./routes/uploadRoute.js";
+import contactRoutes from "./routes/Contact.js";
 
 dotenv.config();
 
@@ -22,8 +22,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// app.use("/api/contact", contactRoutes);
-// app.use("/api/uploadRoute", uploadRoute);
+app.use("/api/contact", contactRoutes);
+app.use("/api/uploadRoute", uploadRoute);
 
 
 // / ✅ Frontend build setup
