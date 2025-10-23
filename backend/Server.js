@@ -30,11 +30,11 @@ app.use("/api/uploadRoute", uploadRoute);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(express.static(path.join(__dirname, "../dist"))); // Vite default build folder
+app.use(express.static(path.join(__dirname, "..frontend/build"))); // Vite default build folder
 // If you're using CRA: "../build"
 
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "../dist", "index.html"));
+  res.sendFile(path.join(__dirname, "..frontend/build", "index.html"));
 });
 
 
