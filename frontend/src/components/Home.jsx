@@ -110,7 +110,7 @@ const Home = ({ darkMode }) => {
 
 
       <div className=" hidden border border-[black] lg:flex px-10 h-[400px]">
-        <img src="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1758264688/Alvent_site_7_oyaxe0.png" alt="" />
+        <img src="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1761267461/Screenshot_20251024_015150_Instagram_jfiwoy.jpg" alt="" />
       </div>
       <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 100 10" preserveAspectRatio="none">
         <path d="M0,0 Q50,10 100,0 L100,19 L0,10 Z"
