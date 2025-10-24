@@ -36,7 +36,7 @@ const Portfolio = () => {
         <div className="text-[25px] mx-auto bg-gray-500 rounded-full   w-[250px] py-1 ">
           <h2 className=" text-white text-center items-center   font-bold">Portfolio</h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4  px-5   ">
+        <div className="grid   grid-cols-2 md:grid-cols-3 gap-4  px-5   ">
 
 
 
@@ -46,7 +46,7 @@ const Portfolio = () => {
 
             <div
               key={i}
-              className="relative w-full h-48 flex items-center text-center justify-center bg-gray-100 rounded overflow-hidden group"
+              className="relative   w-full lg:h-48 flex items-center text-center justify-center bg-gray-100 rounded overflow-hidden group"
             >
               <img
                 src={baseUrl + img.name}
@@ -55,7 +55,7 @@ const Portfolio = () => {
               />
                      {/* Text overlay (appears on hover) */}
           <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-white px-4 text-left text-sm lg:text-lg font-bold">{img.text}</span>
+            <span className="text-white px-4 text-wrap  lg:text-left text-[10px] py-4 lg:text-lg font-bold">{img.text}</span>
           </div>
          
             </div>

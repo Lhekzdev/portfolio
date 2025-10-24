@@ -35,10 +35,10 @@ const Home = ({ darkMode }) => {
     portfolioRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <section className="w-full bg-gradient-to-r flex items-center justify-between from-[hsl(172,90%,69%)] to-[#02c3bd] h-auto relative ">
+    <section className="w-full bg-gradient-to-r flex items justify-between from-[hsl(172,90%,69%)] to-[#02c3bd] h-auto relative ">
 
       {/* <div className="items-center flex pr-10" > */}
-      <div className=" border border-[red] lg:max-w-[55%]  ">
+      <div className=" border  lg:max-w-[55%]  ">
 
 
 
@@ -46,7 +46,7 @@ const Home = ({ darkMode }) => {
         <section className=" text-left  px-8 py-20">
           <motion.h2 className="text-4xl pl-5 font-bold font-poppins  text-white 
                [text-shadow:_2px_2px_0_#00c6a9]" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            Hi, I'm <br /> Olaseinde Aduraleke Samuel
+            Hi, I'm <br /> Olaseinde Aduraleke Samuel 
           </motion.h2>
           <p className={`${darkMode ? "text-red-950" : "text-red-900"} text-lg mt-4 font-semibold pl-5`}> | Senior Frontend Developer | </p>
           <p className="mb-5 pl-5">I design and build responsive, user-friendly web applications that solve <br />real-world problems and deliver seamless digital experiences.</p>
@@ -59,7 +59,7 @@ const Home = ({ darkMode }) => {
 
           <div className="  p-10">
             <h2 className="text-2xl font-bold mb-4">Projects</h2>
-            <div className="grid gap-5 grid-cols-1  pb-10 flex lg:flex-col  ">
+            <div className="grid gap-5 grid-cols-1  pb-10 lg:flex lg:flex-col  ">
 
 
 
@@ -109,10 +109,12 @@ const Home = ({ darkMode }) => {
       </div>
 
 
-      <div className=" hidden border border-[black] lg:flex px-10 h-[400px]">
-        <img src="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1761267461/Screenshot_20251024_015150_Instagram_jfiwoy.jpg" alt="" />
+      <div className=" hidden rounded-lg mt-7  lg:flex lg:px-10  lg:pt-28 lg:h-[50vw]">
+
+
+        <img className="rounded-2xl" src="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1761322290/Screenshot_2025-10-24_170946_sowzij.png" alt="" />
       </div>
-      <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 100 10" preserveAspectRatio="none">
+      <svg className="absolute  bottom-0 left-0 w-full" viewBox="0 0 100 10" preserveAspectRatio="none">
         <path d="M0,0 Q50,10 100,0 L100,19 L0,10 Z"
           className="fill-[hsl(172,90%,69%)] dark:fill-gray-900"
         />
