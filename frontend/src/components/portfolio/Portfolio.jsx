@@ -51,7 +51,7 @@ const Portfolio = () => {
 
       {/* Text overlay (appears on hover) */}
       <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
-        <span className="text-white text-[10px] sm:text-sm md:text-base font-semibold leading-snug break-words max-w-full">
+        <span className="text-white text-[10px] text-sm  lg:text-base font-semibold leading-snug break-words max-w-full">
           {img.text}
         </span>
       </div>
