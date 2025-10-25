@@ -1,7 +1,7 @@
 const Skills = () => {
     return (
  <section  className="bg-[hsl(172,90%,69%)] flex flex-col gap-y-9  px-10  py-10 h-auto  ">
-        <div className="w-full px-4  md:h-auto  relative flex md:gap-y-11 flex-col rounded-lg shadow-2xl py-6  dark:bg-gray-900">
+        <div className="w-full px-4  md:h-auto  relative flex md:gap-y-11 flex-col rounded-lg shadow-2xl py-6 ">
             <div className="text-[25px] mx-auto bg-gray-500    rounded-full   w-[250px] py-2">
          <h2 className=" text-white text-center items-center   font-bold">Skills</h2>
          </div>
