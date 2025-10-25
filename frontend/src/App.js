@@ -1,5 +1,5 @@
 
-
+import React,{Suspense,lazy} from 'react';
 import AboutMe from './components/aboutMe/AboutMe.jsx';
 
 import AppLayout from './Layouts/AppLayout.jsx';
@@ -12,7 +12,7 @@ import { Route ,Routes } from 'react-router-dom';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import Portfolio from './components/portfolio/Portfolio.jsx';
-import LandingPage from './components/landingPage/LandingPage.jsx';
+const LandingPage = lazy(() => import("./components/landingPage/LandingPage.jsx"));
 
 
 function App() {
@@ -21,6 +21,9 @@ function App() {
 
     <div>
 <AppLayout>
+<Suspense fallback={<div className="flex justify-center items-center h-screen">
+  <span className="animate-spin rounded-full h-12 w-12 border-4 border-gray-400 border-t-blue-600"></span>
+</div>}>
       <Routes>
           <Route  path="/" element={<LandingPage/>}/>
           {/* <Route  path="/portfolio" element={<Portfolio/>}/> */}
@@ -34,6 +37,7 @@ function App() {
       
       
         </Routes>
+        </Suspense>
       </AppLayout>
   <ToastContainer position="top-right" autoClose={3000} />
     </div>

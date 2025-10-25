@@ -1,6 +1,6 @@
 const Skills = () => {
     return (
- <section  className="bg-[hsl(172,90%,69%)] flex flex-col gap-y-9  px-10  py-10 h-auto  dark:bg-gray-900">
+ <section  className="bg-[hsl(172,90%,69%)] flex flex-col gap-y-9  px-10  py-10 h-auto  ">
         <div className="w-full px-4  md:h-auto  relative flex md:gap-y-11 flex-col rounded-lg shadow-2xl py-6  dark:bg-gray-900">
             <div className="text-[25px] mx-auto bg-gray-500    rounded-full   w-[250px] py-2">
          <h2 className=" text-white text-center items-center   font-bold">Skills</h2>
@@ -89,12 +89,12 @@ const Skills = () => {
      <h1 className="text-[20px] text-center font-bold">Backend</h1>
     
      
-<div className="grid md:grid-cols-3 lg:grid-cols-4 items-center md:gap-10 gap-5 text-6xl p-6">
+<div className="grid md:grid-cols-3 lg:grid-cols-4 items-center md:gap-10 gap-5 lg:text-6xl p-6">
       {/* Node.js */}
       <div className="flex flex-col items-center">
         <i className="devicon-nodejs-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">Node.js</h4>
-  < p className="text-center font-normal max-w-48 text-[15px]">Built scalable backend servers with JavaScript runtime for applications</p>
+  <p className="text-center font-normal max-w-48 text-[15px]">Built scalable backend servers with JavaScript runtime for applications</p>
       </div>
 
       {/* Express.js (no colored icon, plain only) */}
