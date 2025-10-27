@@ -40,18 +40,18 @@ const Portfolio = () => {
   {images.map((img, i) => (
     <div
       key={i}
-      className="relative   w-full aspect-[4/3] flex items-center justify-center bg-gray-100 rounded-md overflow-hidden group"
+      className="relative   w-full  flex items-center justify-center bg-gray-100 rounded-md overflow-hidden group"
     >
       <img
        loading="lazy"
         src={baseUrl + img.name}
         alt={`img-${i}`}
-        className="h-full w-full object-cover"
+        className="h-full w-full object-contain p-1"
       />
 
       {/* Text overlay (appears on hover) */}
       <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
-        <span className="text-white text-[10px] text-sm  lg:text-base font-semibold leading-snug break-words max-w-full">
+        <span className="text-white text-[10px]   lg:text-base font-semibold leading-snug break-words max-w-full">
           {img.text}
         </span>
       </div>

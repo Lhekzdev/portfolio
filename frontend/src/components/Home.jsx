@@ -14,8 +14,8 @@ const Home = ({ darkMode }) => {
 
   const images = [
 
-    { name: "v1758264688/Alvent_site_7_oyaxe0.png", heading: "Alvent", text: "A platform for easy event management — built with React, Node.js, and MongoDB " },
-    { name: "v1758264821/Agro-tech-2_xn65ji.png", heading: "Clothing E-commerce App", text: "A simple e-commerce app for fashion — built with React, Tailwind CSS, and Firebase for authentication" },
+    { name: "v1758264688/Alvent_site_7_oyaxe0.png", heading: "Alvent", text: "A platform for easy event management — built with React, Node.js, and MongoDB "  , link: "https://alvent.netlify.app" },
+    { name: "v1758264821/Agro-tech-2_xn65ji.png", heading: "FarmSol", text: "Developed using React, Tailwind, Vite, Recoil, Formik, Yup, Axios, and Cloudinary", link: "https://agroallied.netlify.app" },
 
 
 
@@ -69,7 +69,15 @@ const Home = ({ darkMode }) => {
 
 
                 {images.map((img, i) => (
-                  <div key={i} className=" shadow-[0_10px_30px_rgba(0,0,0,0.5)] lg:w-full       p-5 rounded-xl">
+                  <a key={i} 
+                  
+                  href={img.link}
+    target="_blank"   // opens in new tab
+    rel="noopener noreferrer"  // security best practice
+                  className=" shadow-[0_10px_30px_rgba(0,0,0,0.5)] lg:w-full       p-5 rounded-xl">
+                     
+  
+    
                     <h3 className="font-bold pb-3">{img.heading}</h3>
                     <img src={baseUrl + img.name} className="bg-gray-100 border w-full h-[150px] border-gray-500" alt="" />
 
@@ -79,8 +87,8 @@ const Home = ({ darkMode }) => {
                     <p >{img.text}</p>
 
 
-                  </div>
-
+                  
+</a>
 
                 ))}
 
