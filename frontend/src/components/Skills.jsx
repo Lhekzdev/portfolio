@@ -20,51 +20,69 @@ const Skills = () => {
 
     <div className="grid md:grid-cols-3 md:gap-24 gap-10 text-6xl p-6">
 
+   {/* React */}
+  <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-colors duration-300">
+  <i className="devicon-react-original colored text-5xl"></i>
+  <h4 className="text-xl font-bold mt-2">React</h4>
+  <p className="text-center font-normal max-w-48 text-[15px]">
+     I used React to build interactive and responsive user interfaces for my portfolio and event ticketing projects, managing states and components efficiently.
+  </p>
+</div>
+
+
       {/* Tailwind */}
-      <div className="flex flex-col items-center">
-        <i className="devicon-tailwindcss-plain colored"></i>
+  <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-colors duration-300">
         <h4 className="text-xl font-bold mt-2">Tailwind</h4>
-         < p className="text-center font-normal max-w-48 text-[15px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, pariatur.</p>
+         < p className="text-center font-normal max-w-48 text-[15px]"> I used Tailwind CSS to style my apps with clean, responsive, and reusable utility classes for faster development..</p>
       </div>
 
       {/* HTML5 */}
-      <div className="flex flex-col items-center">
+ <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-colors duration-300">
         <i className="devicon-html5-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">HTML5</h4>
-         < p className="text-center font-normal max-w-48 text-[15px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, pariatur.</p>
+         < p className="text-center font-normal max-w-48 text-[15px]">I used HTML5 to structure web pages and ensure accessibility, SEO-friendliness, and proper semantic markup</p>
       </div>
 
       {/* CSS3 */}
-      <div className="flex flex-col font-bold items-center">
+      <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-colors duration-300">
         <i className="devicon-css3-plain colored"></i>
         <h4 className="text-xl mt-2">CSS3</h4>
-         < p className="text-center font-normal max-w-48 text-[15px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, pariatur.</p>
+         < p className="text-center font-normal max-w-48 text-[15px]">I used CSS3 to create visually appealing layouts, handle animations, and enhance the look and feel of my websites</p>
       </div>
 
       {/* JavaScript */}
-      <div className="flex flex-col items-center">
+<div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-colors duration-300">
         <i className="devicon-javascript-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">JavaScript</h4>
-         < p className="text-center font-normal max-w-48 text-[15px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, pariatur.</p>
+         < p className="text-center font-normal max-w-48 text-[15px]">I used JavaScript to add interactivity and functionality to my web applications, integrating APIs and managing logic.</p>
       </div>
 
       {/* Next.js */}
-  <div className="flex flex-col items-center">
+ <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-colors duration-300">
   <img
     src="https://cdn.worldvectorlogo.com/logos/next-js.svg"
     alt="Next.js"
     className="w-12 h-12"
   />
   <h4 className="text-xl font-bold mt-2">Next.js</h4>
-  <p className="text-center font-normal max-w-48 text-[15px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, pariatur.</p>
+  <p className="text-center font-normal max-w-48 text-[15px]"> I used Next.js for server-side rendering, optimized routing, and improved performance in my full-stack projects</p>
 </div>
 
       {/* Figma */}
-      <div className="flex flex-col items-center">
+     <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-colors duration-300">
         <i className="devicon-figma-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">Figma</h4>
-       < p className="text-center font-normal max-w-48 text-[15px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, pariatur.</p>
+       < p className="text-center font-normal max-w-48 text-[15px]"> I used Figma to design modern and user-friendly interfaces, then converted those designs into fully functional web pages.</p>
       </div>
+
+      {/* Sass */}
+ <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-colors duration-300">
+    <i className="devicon-sass-original colored text-5xl"></i>
+    <h4 className="text-xl font-bold mt-2">Sass</h4>
+    <p className="text-center font-normal max-w-48 text-[15px]">
+      I used Sass to organize and maintain scalable CSS with variables, mixins, and nested rules for cleaner styling.
+    </p>
+  </div>
     </div>
 </div>
 
@@ -91,28 +109,31 @@ const Skills = () => {
      
 <div className="grid md:grid-cols-3 lg:grid-cols-4 items-center md:gap-10 gap-5 lg:text-6xl p-6">
       {/* Node.js */}
-      <div className="flex flex-col items-center">
+   <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-lg hover:brightness-105 hover:-translate-y-3 transition-all duration-300">
+
+
+
         <i className="devicon-nodejs-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">Node.js</h4>
   <p className="text-center font-normal max-w-48 text-[15px]">Built scalable backend servers with JavaScript runtime for applications</p>
       </div>
 
       {/* Express.js (no colored icon, plain only) */}
-      <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-lg hover:brightness-105 hover:-translate-y-3 transition-all duration-300">
         <i className="devicon-express-original"></i>
         <h4 className="text-xl font-bold mt-2">Express.js</h4>
      < p className="text-center font-normal max-w-48 text-[15px]">Created fast, lightweight APIs with routing and middleware support</p>
       </div>
 
       {/* MongoDB */}
-      <div className="flex flex-col items-center">
+   <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-lg hover:brightness-105 hover:-translate-y-3 transition-all duration-300">
         <i className="devicon-mongodb-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">MongoDB</h4>
        < p className="text-center font-normal max-w-48 text-[15px]">Stored, managed, and queried application data using NoSQL database</p>
       </div>
 
       {/* Mongoose (use official SVG logo) */}
-      <div className="flex flex-col items-center">
+   <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-lg hover:brightness-105 hover:-translate-y-3 transition-all duration-300">
         <img
           src="https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png"
           alt="Mongoose"
@@ -123,7 +144,7 @@ const Skills = () => {
       </div>
 
       {/* RESTful APIs (use a simple API icon) */}
-      <div className="flex flex-col items-center">
+   <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-lg hover:brightness-105 hover:-translate-y-3 transition-all duration-300">
         <img
            src="https://nordicapis.com/wp-content/uploads/Web-Service-What-is-REST-API-And-How-Does-it-Work-1024x576.png"
           alt="RESTful API"
@@ -134,7 +155,7 @@ const Skills = () => {
       </div>
 
       {/* JWT & Auth Flows (JWT official logo) */}
-      <div className="flex flex-col items-center">
+   <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-lg hover:brightness-105 hover:-translate-y-3 transition-all duration-300">
         <img
           src="https://jwt.io/img/pic_logo.svg"
           alt="JWT"
@@ -144,7 +165,7 @@ const Skills = () => {
      < p className="text-center font-normal max-w-48 text-[15px]">Implemented secure, token-based authentication for user access management.</p>
       </div>
       {/* JWT & Auth Flows (JWT official logo) */}
-      <div className="flex flex-col items-center">
+   <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-lg hover:brightness-105 hover:-translate-y-3 transition-all duration-300">
         <img
           src="https://jwt.io/img/pic_logo.svg"
           alt="JWT"
@@ -176,42 +197,48 @@ const Skills = () => {
     
 <div className="grid md:grid-cols-3 lg:grid-cols-4 items-center gap-10 text-6xl p-6">
       {/* Git */}
-      <div className="flex flex-col items-center">
+ <div className="flex flex-col items-center p-4 rounded-2xl shadow-md border border-transparent hover:border-cyan-400 hover:shadow-[0_0_20px_#22d3ee] hover:-translate-y-2 hover:scale-105 transition-colors duration-500">
+
         <i className="devicon-git-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">Git</h4>
    <p className="text-center font-normal max-w-48 text-[15px]">Tracked code changes, managed versions, and collaborated with teammates</p>
       </div>
 
       {/* GitHub */}
-      <div className="flex flex-col items-center">
+<div className="flex flex-col items-center p-4 rounded-2xl shadow-md border border-transparent hover:border-cyan-400 hover:shadow-[0_0_20px_#22d3ee] hover:-translate-y-2 hover:scale-105 transition-colors duration-500">
+
         <i className="devicon-github-original"></i>
         <h4 className="text-xl font-bold mt-2">GitHub</h4>
         <p className="text-center font-normal max-w-48 text-[15px]">Hosted repositories, collaborated on projects, and deployed live demos</p>
       </div>
 
       {/* Postman */}
-      <div className="flex flex-col items-center">
+<div className="flex flex-col items-center p-4 rounded-2xl shadow-md border border-transparent hover:border-cyan-400 hover:shadow-[0_0_20px_#22d3ee] hover:-translate-y-2 hover:scale-105 transition-colors duration-500">
+
         <i className="devicon-postman-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">Postman</h4>
      <p className="text-center font-normal max-w-48 text-[15px]"> Tested APIs, validated endpoints, debugged requests, and documented workflows</p>
       </div>
 
       {/* VS Code */}
-      <div className="flex flex-col items-center">
+<div className="flex flex-col items-center p-4 rounded-2xl shadow-md border border-transparent hover:border-cyan-400 hover:shadow-[0_0_20px_#22d3ee] hover:-translate-y-2 hover:scale-105 transition-colors duration-500">
+
         <i className="devicon-vscode-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">VS Code</h4>
          <p className="text-center font-normal max-w-48 text-[15px]">Wrote, edited, debugged, and organized code efficiently with extensions</p>
       </div>
 
       {/* Netlify */}
-      <div className="flex flex-col items-center">
+<div className="flex flex-col items-center p-4 rounded-2xl shadow-md border border-transparent hover:border-cyan-400 hover:shadow-[0_0_20px_#22d3ee] hover:-translate-y-2 hover:scale-105 transition-colors duration-500">
+
         <i className="devicon-netlify-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">Netlify</h4>
      <p className="text-center font-normal max-w-48 text-[15px]">Deployed frontend projects quickly with automated builds and continuous integration</p>
       </div>
 
       {/* Vercel */}
-      <div className="flex flex-col items-center">
+<div className="flex flex-col items-center p-4 rounded-2xl shadow-md border border-transparent hover:border-cyan-400 hover:shadow-[0_0_20px_#22d3ee] hover:-translate-y-2 hover:scale-105 transition-colors duration-500">
+
         <i className="devicon-vercel-original"></i>
         <h4 className="text-xl font-bold mt-2">Vercel</h4>
         <p className="text-center font-normal max-w-48 text-[15px]">Hosted Next.js apps, optimized performance, and managed seamless deployments</p>
@@ -219,7 +246,8 @@ const Skills = () => {
   
 
       {/* Render (no devicon → use SVG) */}
-      <div className="flex flex-col items-center">
+<div className="flex flex-col items-center p-4 rounded-2xl shadow-md border border-transparent hover:border-cyan-400 hover:shadow-[0_0_20px_#22d3ee] hover:-translate-y-2 hover:scale-105 transition-colors duration-500">
+
         <img
           src="https://render.com/images/render-logo.svg"
           alt="Render"
@@ -230,21 +258,24 @@ const Skills = () => {
       </div>
 
       {/* Firebase */}
-      <div className="flex flex-col items-center">
+<div className="flex flex-col items-center p-4 rounded-2xl shadow-md border border-transparent hover:border-cyan-400 hover:shadow-[0_0_20px_#22d3ee] hover:-translate-y-2 hover:scale-105 transition-colors duration-500">
+
         <i className="devicon-firebase-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">Firebase</h4>
        <p className="text-center font-normal max-w-48 text-[15px]">Enabled authentication, stored user data, and hosted small apps</p>
       </div>
 
       {/* NPM */}
-      <div className="flex flex-col items-center">
+<div className="flex flex-col items-center p-4 rounded-2xl shadow-md border border-transparent hover:border-cyan-400 hover:shadow-[0_0_20px_#22d3ee] hover:-translate-y-2 hover:scale-105 transition-colors duration-500">
+
         <i className="devicon-npm-original-wordmark colored"></i>
         <h4 className="text-xl font-bold mt-2">NPM</h4>
          <p className="text-center font-normal max-w-48 text-[15px]">Installed packages, managed dependencies, and streamlined project development workflows</p>
       </div>
 
       {/* Yarn */}
-      <div className="flex flex-col items-center">
+<div className="flex flex-col items-center p-4 rounded-2xl shadow-md border border-transparent hover:border-cyan-400 hover:shadow-[0_0_20px_#22d3ee] hover:-translate-y-2 hover:scale-105 transition-colors duration-500">
+
         <i className="devicon-yarn-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">Yarn</h4>
          <p className="text-center font-normal max-w-48 text-[15px]">Managed packages, improved install speed, and ensured consistent project dependencies</p>
