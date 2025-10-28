@@ -17,8 +17,8 @@ const Portfolio = () => {
     { name:"v1758264821/Agro-tech-2_xn65ji.png", text:"Developed using React, Tailwind, Vite, Recoil, Formik, Yup, Axios, and Cloudinary" },
     { name:"v1758264687/alvent_site_9_k3g61h.png", text:"Sign-up page developed with MongoDB backend integration, secure authentication, and responsive validation for seamless onboarding." },
     {name:"v1758264688/sporting_site_3_pfpwua.png", text:"Dynamic Firebase product display highlighting sporting kits with images, prices, and cart management using Context API."},
-    {name:"v1758264685/alvent_site_8_cg8a1m.png", text:"Developed responsive frontend with React, MUI, Tailwind, Redux, Formik, Stripe, Cloudinary, and Leaflet; integrated APIs with backend team" },
-    {name:"v1758264686/sporting_site_5_d0i4nu.png", text:"Event creation page integrated with MongoDB, enabling users to efficiently add, manage, and publish events." }
+    {name:"v1758264685/alvent_site_8_cg8a1m.png", text:"Event creation page integrated with MongoDB, enabling users to efficiently add, manage, and publish events."    },
+    {name:"v1758264686/sporting_site_5_d0i4nu.png", text: "A modern clothing app built with React, Firebase, and Paystack — featuring Cloudinary image uploads, Context API, and responsive CSS design."}
 
 
 
@@ -51,7 +51,7 @@ const Portfolio = () => {
 
       {/* Text overlay (appears on hover) */}
       <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
-        <span className="text-white text-[8.5px]  leading-tight lg:leading-none lg:text-base font-semibold  break-words max-w-full">
+        <span className="text-white text-[8px] md:text-[9px] leading-tight lg:leading-none lg:text-base font-semibold  break-words max-w-full">
           {img.text}
         </span>
       </div>
