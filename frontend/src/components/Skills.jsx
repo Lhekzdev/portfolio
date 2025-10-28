@@ -32,6 +32,7 @@ const Skills = () => {
 
       {/* Tailwind */}
   <div className="flex flex-col items-center p-4 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-colors duration-300">
+          <i className="devicon-tailwindcss-plain colored text-5xl"></i>
         <h4 className="text-xl font-bold mt-2">Tailwind</h4>
          < p className="text-center font-normal max-w-48 text-[15px]"> I used Tailwind CSS to style my apps with clean, responsive, and reusable utility classes for faster development..</p>
       </div>

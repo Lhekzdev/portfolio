@@ -3,7 +3,7 @@ import React from "react";
 const Experience = () => {
 
     return (
-        <section className="bg-[hsl(172,90%,69%)]   px-10 shadow-xl border border-[red] py-10 h-auto  ">
+        <section className="bg-[hsl(172,90%,69%)]   px-10 shadow-xl  py-10 h-auto  ">
             <div className=" shadow-2xl px-10 rounded-3xl py-5 flex flex-col  item   pt-5 gap-y-10">
                 <h2 className="text-center text-[25px] bg-gray-500   w-[250px] py-1 text-white rounded-full  mx-auto  font-bold">Work Experience</h2>
                 <div className="md:grid grid-cols-2 flex flex-col gap-y-6 py-4  ">

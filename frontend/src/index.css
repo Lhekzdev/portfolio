@@ -26,3 +26,7 @@ code {
   "eject": "react-scripts eject",
   "serve": "serve -s build"
 } */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}

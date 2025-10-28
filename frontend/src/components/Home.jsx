@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { div } from "framer-motion/client";
-// import '../../src/App.css';
-// import '../../src/index.css'
+import '../../src/App.css';
+import '../../src/index.css'
 const Home = ({ darkMode }) => {
 
 
@@ -44,7 +44,7 @@ const Home = ({ darkMode }) => {
 
         {/* Hero Section */}
         <section className=" text-left  px-8 py-20">
-          <motion.h2 className="text-4xl pl-5 font-bold font-poppins  text-white 
+          <motion.h2 className="text-4xl pl-5 font-bold   text-white  font-poppins
                [text-shadow:_2px_2px_0_#00c6a9]" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             Hi, I'm <br /> Olaseinde Aduraleke Samuel 
           </motion.h2>
