@@ -23,11 +23,11 @@ const Contact =()=>{
     resolver: yupResolver(schema),
   });
 
-
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 // ✅ Submit handler
   const onSubmit = async (data) => {
      try {
-    const res = await fetch("/api/contact", {
+         const res = await fetch(`${API_URL}/api/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

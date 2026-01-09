@@ -69,7 +69,7 @@ export const sendContactMessage = async (req, res) => {
     });
   }
 
-  if (!process.env.ADMIN_EMAIL) {
+  if (!process.env.EMAIL_USER) {
     return res.status(500).json({
       error: "Admin email not configured",
     });
@@ -79,7 +79,7 @@ export const sendContactMessage = async (req, res) => {
     // 1️⃣ Email to ADMIN
     await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
-      to: process.env.ADMIN_EMAIL,
+      to: process.env.EMAIL_USER,
       subject: `New Contact Message from ${name}`,
       html: `
         <h3>New Contact Message</h3>
