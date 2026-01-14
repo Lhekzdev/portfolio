@@ -14,7 +14,7 @@ const Home = ({ darkMode }) => {
 
   const images = [
 
-    { name: "v1758264688/Alvent_site_7_oyaxe0.png", heading: "Alvent", text: "A platform for easy event management — built with React, Node.js, and MongoDB "  , link: "https://alvent.netlify.app" },
+    { name: "v1758264688/Alvent_site_7_oyaxe0.png", heading: "Alvent", text: "A platform for easy event management — built with React, Node.js, and MongoDB "  , link: "https://myalvent.com" },
     { name: "v1758264821/Agro-tech-2_xn65ji.png", heading: "FarmSol", text: "Developed using React, Tailwind, Vite, Recoil, Formik, Yup, Axios, and Cloudinary", link: "https://agroallied.netlify.app" },
 
 
