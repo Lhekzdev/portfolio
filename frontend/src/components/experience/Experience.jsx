@@ -9,7 +9,7 @@ const Experience = () => {
                 <div className="md:grid grid-cols-2 flex flex-col gap-y-6 py-4  ">
                     <div className="">
                         <p className="font-bold">
-                            Senior Frontend Developer – Alvent (2024–2025)
+                            Senior Frontend Developer – Alvent (2023–2026)
                         </p>
                         <ul className="list-disc pl-5">
                             <li>Built reusable components with React and Tailwind</li>
@@ -23,7 +23,7 @@ const Experience = () => {
 
                     <div>
 
-                        <p className="font-bold">Backend developer – Alvent (2025)</p>
+                        <p className="font-bold">Backend developer – Alvent (2024-2026)</p>
 
                         <ul className="list-disc pl-5">
 
@@ -65,6 +65,7 @@ const Experience = () => {
                     <h4 className="font-bold"> Online Courses</h4>
                     <p>Full-Stack web development Bootcamp</p>
                     <p>Complete React Developer(Redux,Hooks, GraphQL)</p>
+                    <p>Tutorial on Next.js</p>
 
                 </div>
 
