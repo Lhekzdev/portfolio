@@ -36,7 +36,7 @@ const Footer = () => {
    
 
          <div className="text-sm text-center mb-4 md:mb-0"> <p >
-          © 2025 Samuel — Frontend & Backend Developer
+          © 2026 Samuel — Frontend & Backend Developer
         </p></div>
    </div>
       </div>
