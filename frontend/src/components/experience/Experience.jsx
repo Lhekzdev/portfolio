@@ -6,7 +6,7 @@ const Experience = () => {
         <section className="bg-[hsl(172,90%,69%)]   px-10 shadow-xl  py-10 h-auto  ">
             <div className=" shadow-2xl px-10 rounded-3xl py-5 flex flex-col  item   pt-5 gap-y-10">
                 <h2 className="text-center text-[25px] bg-gray-500   w-[250px] py-1 text-white rounded-full  mx-auto  font-bold">Work Experience</h2>
-                <div className=" md:grid gap-x-10  grid-cols-2 ">
+                <div className=" md:grid md:gap-x-10 gap-y-8 flex flex-col  grid-cols-2 ">
                     <div className=" flex flex-col w-full  gap-y-6  ">
 
                         <p className="font-bold">
