@@ -2,10 +2,28 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
-import { div } from "framer-motion/client";
+
 import '../../src/App.css';
 import '../../src/index.css'
+
+import WordPreview from "./projects/Display"
+
+
 const Home = ({ darkMode }) => {
+
+
+ const text = `With 5 years+ experience translating Figma UI/UX designs into clean,
+responsive, component-based React applications. Skilled in API integration,
+state management, and frontend architecture, with strong collaboration
+experience across backend teams. Recently developed a scalable backend
+system using Express, TypeScript, PostgreSQL, Prisma, Redis, and JWT,
+implementing secure authentication, geo-location matching, payments, and
+real-time features. Passionate about building high-performance web
+applications, real-world solutions and continuously expanding technical
+expertise. Completed structured training through one-on-one and online
+tutoring programs, supplemented by independent learning.`;
+
+
 
 
 
@@ -14,7 +32,7 @@ const Home = ({ darkMode }) => {
 
   const images = [
 
-    { name: "v1758264688/Alvent_site_7_oyaxe0.png", heading: "Alvent", text: "A platform for easy event management — built with React, Node.js, and MongoDB "  , link: "https://myalvent.com" },
+    { name: "v1758264688/Alvent_site_7_oyaxe0.png", heading: "Alvent", text: "A platform for easy event management — built with React, Node.js, and MongoDB ", link: "https://myalvent.com" },
     { name: "v1758264821/Agro-tech-2_xn65ji.png", heading: "FarmSol", text: "Developed using React, Tailwind, Vite, Recoil, Formik, Yup, Axios, and Cloudinary", link: "https://agroallied.netlify.app" },
 
 
@@ -46,10 +64,22 @@ const Home = ({ darkMode }) => {
         <section className=" text-left  px-8 py-20">
           <motion.h2 className="text-4xl pl-5 font-bold   text-white  font-poppins
                [text-shadow:_2px_2px_0_#00c6a9]" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            Hi, I'm <br /> Olaseinde Aduraleke Samuel 
+            Hi, I'm <br /> Olaseinde Aduraleke Samuel
           </motion.h2>
           <p className={`${darkMode ? "text-red-950" : "text-red-900"} text-lg mt-4 font-semibold pl-5`}> | Senior Frontend Developer | </p>
-          <p className="mb-5 pl-5">I design and build responsive, user-friendly web applications that solve <br />real-world problems and deliver seamless digital experiences.</p>
+          <p className="mb-5 pl-5 text-justify font-cursive " id="text">
+            {/* <WordPreview /> */} </p>
+       
+<div className="text-justify font-cursive">
+  {/* Handwriting Name */}
+
+
+
+  {/* Paragraph typing */}
+  <WordPreview />
+</div>
+
+         
 
 
           <a href="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1758149762/Aduraleke-olaseinde_tech_cv_ygbjhz.pdf" className="text-center ml-5  px-5 mt-5 border rounded-md text-red-900" download="My_CV.pdf">
@@ -69,15 +99,15 @@ const Home = ({ darkMode }) => {
 
 
                 {images.map((img, i) => (
-                  <a key={i} 
-                  
-                  href={img.link}
-    target="_blank"   // opens in new tab
-    rel="noopener noreferrer"  // security best practice
-                  className=" shadow-[0_10px_30px_rgba(0,0,0,0.5)] lg:w-full       p-5 rounded-xl">
-                     
-  
-    
+                  <a key={i}
+
+                    href={img.link}
+                    target="_blank"   // opens in new tab
+                    rel="noopener noreferrer"  // security best practice
+                    className=" shadow-[0_10px_30px_rgba(0,0,0,0.5)] lg:w-full       p-5 rounded-xl">
+
+
+
                     <h3 className="font-bold pb-3">{img.heading}</h3>
                     <img src={baseUrl + img.name} className="bg-gray-100 border w-full h-[150px] border-gray-500" alt="" />
 
@@ -87,8 +117,8 @@ const Home = ({ darkMode }) => {
                     <p >{img.text}</p>
 
 
-                  
-</a>
+
+                  </a>
 
                 ))}
 
@@ -100,7 +130,7 @@ const Home = ({ darkMode }) => {
                 window.location.href = "/#portfolio";    // ✅ navigate to same page different section
               }}>
                 <button className="hover:font-bold  hover:text-red-950" >See more...</button>
-                </div>
+              </div>
             </div>
 
           </div>
