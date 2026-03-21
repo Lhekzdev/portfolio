@@ -7,8 +7,11 @@ import { fileURLToPath } from "url";
 
 import uploadRoute from "./routes/uploadRoute.js";
 import contactRoutes from "./routes/Contact.js";
+import  chatMessageRoute  from "./routes/chatMessageRoute.js";
 
 dotenv.config();
+
+
 
 const MONGO_URI = process.env.MONGO_URI;
 
@@ -24,6 +27,7 @@ app.use(express.json());
 
 app.use("/api/contact", contactRoutes);
 app.use("/api/uploadRoute", uploadRoute);
+app.use("/api/chat-stream", chatMessageRoute);
 
 
 // / ✅ Frontend build setup
