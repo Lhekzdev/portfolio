@@ -130,22 +130,21 @@ useEffect(() => {
       </div>
 
       {/* Input box */}
-      <div className="flex gap-2 mt-3">
-        <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask something..."
-          className="flex-1 border p-3 rounded-xl outline-none"
-        />
+    <div className="mx-auto flex gap-2 mt-3 w-full">
+  <input
+    value={input}
+    onChange={(e) => setInput(e.target.value)}
+    placeholder="Ask something..."
+    className="flex-1 min-w-0 border p-3 rounded-xl outline-none"
+  />
 
-        <button   className="bg-green-950 text-white px-5 rounded-xl"  onClick={() => sendMessage(input)}>
-        
-        
-          Send
-        </button>
-
-
-      </div>
+  <button
+    onClick={() => sendMessage(input)}
+    className="bg-green-950 text-white px-4 sm:px-5 py-3 rounded-xl whitespace-nowrap"
+  >
+    Send
+  </button>
+</div>
     </div>
     </section>
   );
