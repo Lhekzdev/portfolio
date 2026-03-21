@@ -38,7 +38,7 @@ const AboutMe =()=>{
          <section href="#contact" className="   bg-[hsl(172,90%,69%)]  px-10 py-24 h-auto ">
            
         <div className="relative px-7 flex  shadow-2xl rounded-xl flex-col gap-y-4 py-4">
-<h2 className="text-center text-[25px] bg-gray-500  mx-auto  w-[200px] py-1 text-white rounded-full items-center mb-8  font-bold">About Me</h2> 
+<h2 className="text-center text-[25px] bg-teal-600  mx-auto  w-[200px] py-1 text-white rounded-full items-center mb-8  font-bold">About Me</h2> 
 
 
 

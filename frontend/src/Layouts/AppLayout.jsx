@@ -7,12 +7,13 @@ const AppLayout = ({ children }) => {
       const [darkMode, setDarkMode] = useState(false);
         const [isOpen,setIsOpen] =useState(false)
     return (
-        <div className={darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"}>
+        <section  className={darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"}>
            <Navbar
            isOpen={isOpen}
            setIsOpen={setIsOpen}
       darkMode ={darkMode}
       setDarkMode ={setDarkMode}
+      
    
       />
 
@@ -25,7 +26,7 @@ const AppLayout = ({ children }) => {
              <Footer/>
              </div>
      
-        </div>
+        </section>
 
 
     )

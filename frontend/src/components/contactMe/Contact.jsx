@@ -92,7 +92,7 @@ const Contact =()=>{
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-gray-500 text-white p-2 rounded hover:bg-slate-900 disabled:opacity-50"
+        className="w-full bg-teal-600 text-white p-2 rounded hover:bg-slate-900 disabled:opacity-50"
       >
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>

@@ -9,6 +9,7 @@ import Portfolio from "../portfolio/Portfolio.jsx";
 
 
 import Contact from "../contactMe/Contact.jsx";
+import  ChatBox  from '../chat/ChatBox.jsx';
 
 
 
@@ -19,7 +20,12 @@ import Contact from "../contactMe/Contact.jsx";
 
 
 const LandingPage = () => {
-
+// useEffect(() => {
+//   if (window.location.hash) {
+//     window.history.replaceState(null, "", window.location.pathname);
+//   }
+//   window.scrollTo(0, 0);
+// }, []);
 
   const topRef = useRef()
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -52,6 +58,10 @@ const LandingPage = () => {
 
       <section id="portfolio">
         <Portfolio />
+
+      </section>
+      <section id="chat">
+        <ChatBox />
 
       </section>
       <section id="AboutMe">

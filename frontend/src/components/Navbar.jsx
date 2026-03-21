@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState,useEffect } from "react"
 
 import { Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -16,7 +16,9 @@ import { Image } from 'cloudinary-react';
 
 
 const Navbar =({darkMode,setDarkMode,isOpen,setIsOpen})=>{
-
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
 
     return(
@@ -35,13 +37,15 @@ const Navbar =({darkMode,setDarkMode,isOpen,setIsOpen})=>{
 <div className="flex items-center gap-2">
   <ul className="  hidden md:flex font-bold  text-[20px] space-x-6 ">
   
-    <li cla > <a href="#landingPage"  className="hover:text-blue-500 hover:pl-5 cursor-pointer">Home </a></li>
-    <li > <a href="#portfolio"  className="hover:text-blue-500 cursor-pointer">Portfolio </a></li>
-    <li><a href="#AboutMe" className="hover:text-blue-500 cursor-pointer">About </a> </li>
-    <li><a href="#skills"  className="hover:text-blue-500 cursor-pointer">Skills </a></li>
+    <li cla > <a href="#landingPage"  className="hover:text-blue-500  hover:pl-5 cursor-pointer transform hover:-translate-y-1 transition duration-300 inline-block">Home </a></li>
+    <li > <a href="#portfolio"  className="hover:text-blue-500  cursor-pointer transform hover:-translate-y-1 transition duration-300 inline-block">Portfolio </a></li>
+    <li><a href="#AboutMe" className="hover:text-blue-500 cursor-pointer transform hover:-translate-y-1 transition duration-300 inline-block">About </a> </li>
+    <li><a href="#skills"  className="hover:text-blue-500 cursor-pointer transform hover:-translate-y-1 transition duration-300 inline-block">Skills </a></li>
     {/* <li><a href ="#Projects"className="hover:text-blue-500 cursor-pointer">Projects </a> </li> */}
-    <li><a href="#experience" className="hover:text-blue-500 cursor-pointer">Experience </a> </li>
+    <li><a href="#experience" className="hover:text-blue-500 cursor-pointer transform hover:-translate-y-1 transition duration-300 inline-block">Experience </a> </li>
     {/* <li><Link to ="#Contact" className="hover:text-blue-500 cursor-pointer">Contact </Link> </li> */}
+    <li><a href="#chat" className="hover:text-blue-500 cursor-pointer transform hover:-translate-y-1 transition duration-300 inline-block">AI Assistant </a> </li>
+     {/* <Link to="/chat">Go to Chat</Link> */}
 
   </ul>
   <div className="md:hidden">
@@ -53,14 +57,14 @@ const Navbar =({darkMode,setDarkMode,isOpen,setIsOpen})=>{
 {isOpen && (
   <div className="">
 
- <ul className=" w-full  bg-cyan-50  md:hidden absolute  font-bold text-[20px] border  shadow shadow-2xl  mt-10 flex flex-col gap-y-5 h-screen py-5 left-0 pl-6  ">
+ <ul className=" w-full  bg-cyan-50  md:hidden absolute  font-bold text-[20px] border   shadow-2xl  mt-10 flex flex-col gap-y-5 h-screen py-5 left-0 pl-6  ">
   
     <a   href="#landingPage"  onClick={()=>{setIsOpen(false)}}   className="hover:text-blue-500 hover:pl-5  cursor-pointer">Home </a>
     <a href="#portfolio" onClick={()=>{setIsOpen(false)}} className="hover:text-blue-500 hover:pl-5 cursor-pointer">Portfolio  </a>
     <a href="#AboutMe" onClick={()=>{setIsOpen(false)}}  className="hover:text-blue-500 hover:pl-5 cursor-pointer">About </a>
      <a href ="#skills" onClick={()=>{setIsOpen(false)}} className="hover:text-blue-500 hover:pl-5 cursor-pointer">Skills </a>
      <a href="#experience" onClick={()=>{setIsOpen(false)}}  className="hover:text-blue-500 hover:pl-5 cursor-pointer">Experience </a>
-     {/* <a href="#Contact" onClick={()=>{setIsOpen(false)}}  className="hover:text-blue-500 cursor-pointer">Contact </a> */}
+     <a href="#chat" onClick={()=>{setIsOpen(false)}}  className="hover:text-blue-500 cursor-pointer">AI Assistant</a>
 
   
 </ul>

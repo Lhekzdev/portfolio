@@ -1,5 +1,5 @@
 
-import React,{Suspense,lazy} from 'react';
+import React,{Suspense,lazy,useEffect} from 'react';
 import AboutMe from './components/aboutMe/AboutMe.jsx';
 
 import AppLayout from './Layouts/AppLayout.jsx';
@@ -11,11 +11,19 @@ import { Route ,Routes } from 'react-router-dom';
 // import Home from './components/landingPage/LandingPage.jsx';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// import ChatBox from './components/chat/ChatBox.jsx';
 // import Portfolio from './components/portfolio/Portfolio.jsx';
 const LandingPage = lazy(() => import("./components/landingPage/LandingPage.jsx"));
 
 
+
 function App() {
+
+  useEffect(() => {
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual";
+  }
+}, []);
   return (
 
 
@@ -26,6 +34,7 @@ function App() {
 </div>}>
       <Routes>
           <Route  path="/" element={<LandingPage/>}/>
+      {/* <Route path="/chat" element=  {<ChatBox/>}/> */}
           {/* <Route  path="/portfolio" element={<Portfolio/>}/> */}
       
           {/* <Route  path="aboutMe" element={<AboutMe/>}/> */}
