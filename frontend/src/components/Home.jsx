@@ -12,16 +12,7 @@ import WordPreview from "./projects/Display"
 const Home = ({ darkMode }) => {
 
 
- const text = `With 5 years+ experience translating Figma UI/UX designs into clean,
-responsive, component-based React applications. Skilled in API integration,
-state management, and frontend architecture, with strong collaboration
-experience across backend teams. Recently developed a scalable backend
-system using Express, TypeScript, PostgreSQL, Prisma, Redis, and JWT,
-implementing secure authentication, geo-location matching, payments, and
-real-time features. Passionate about building high-performance web
-applications, real-world solutions and continuously expanding technical
-expertise. Completed structured training through one-on-one and online
-tutoring programs, supplemented by independent learning.`;
+ const text = `I design and build scalable, responsive web applications that solve real-world problems and deliver seamless user experiences. With strong expertise in frontend development and solid backend capabilities, I develop complete end-to-end solutions including API integration, authentication systems, and database management. Passionate about clean architecture, performance, and intuitive UI/UX, I collaborate effectively to turn ideas into production-ready applications.`;
 
 
 
@@ -66,7 +57,7 @@ tutoring programs, supplemented by independent learning.`;
                [text-shadow:_2px_2px_0_#00c6a9]" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             Hi, I'm <br /> Olaseinde Aduraleke Samuel
           </motion.h2>
-          <p className={`${darkMode ? "text-red-950" : "text-red-900"} text-lg mt-4 font-semibold pl-5`}> | Senior Frontend Developer | </p>
+          <p className={`${darkMode ? "text-red-950" : "text-red-900"} text-lg mt-4 font-semibold pl-5`}> Full Stack Developer | Frontend-Focused </p>
           <p className="mb-5 pl-5 text-justify font-cursive " id="text">
             {/* <WordPreview /> */} </p>
        
