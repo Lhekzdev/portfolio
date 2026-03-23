@@ -1,6 +1,6 @@
 import React from "react"
 import { Navigate, useNavigate } from "react-router-dom"
-
+import { motion } from "framer-motion"
 const AboutMe =()=>{
 
 
@@ -35,7 +35,7 @@ const AboutMe =()=>{
     const navigate =useNavigate()
     return(
     //    <div href="#contact">
-         <section href="#contact" className="   bg-[hsl(172,90%,69%)]  px-10 py-24 h-auto ">
+         <section href="#contact" className="   bg-slate-600    px-10 py-24 h-auto ">
            
         <div className="relative px-7 flex  shadow-2xl rounded-xl flex-col gap-y-4 py-4">
 <h2 className="text-center text-[25px] bg-teal-600  mx-auto  w-[200px] py-1 text-white rounded-full items-center mb-8  font-bold">About Me</h2> 
@@ -45,7 +45,7 @@ const AboutMe =()=>{
 {/* image section */}
   <div className="flex  h-auto justify-between">
             
-<div className=" flex  shadow-lg p-6 flex-col gap-y-8">
+<div className=" flex text-white shadow-lg p-6 flex-col gap-y-8">
    <div className="flex flex-col gap-y-4"> 
 <h4 className="text-[20px] font-bold">Background</h4> 
 <p>I'm a self-driven frontend developer with a growing passion for backend technologies. I started my journey building interfaces with HTML, CSS, and JavaScript, and gradually evolved into building full-stack web applications using the MERN stack.</p>
@@ -61,12 +61,18 @@ To grow as a full-stack developer, work with innovative teams on real-world proj
 <a className=" cursor-pointer" 
 
  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}> 
-    <button  className="text-[20px] font-bold border text-center h-10 mx-auto text-slate-700 border-cyan-950 w-auto px-6 rounded-lg ">Contact Me</button>
+    <button  className="text-[20px] font-bold border text-center h-10 mx-auto  border-cyan-950 w-auto text-white px-6 rounded-lg ">Contact Me</button>
 </a>
 </div>
 
  <div className="hidden md:flex px-10  w-full">
-                <img className="rounded-full" src="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1761267461/Screenshot_20251024_015150_Instagram_jfiwoy.jpg" alt="About-Me img" />
+                <motion.img className="rounded-full" src="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1761267461/Screenshot_20251024_015150_Instagram_jfiwoy.jpg" alt="About-Me img"
+                
+                                    initial={{ opacity: 0, x: 40 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+transition={{ duration: 0.8 }}
+  viewport={{ once: false }}
+                />
             </div>
           
 </div>

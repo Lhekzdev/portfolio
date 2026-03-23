@@ -88,11 +88,11 @@ useEffect(() => {
   setLoading(false);
 };
   return (
-    <section  className="bg-[hsl(172,90%,69%)]   px-10 shadow-xl  py-10 h-auto" >
+    <section  className="bg-slate-500   px-10 shadow-xl  py-10 h-auto" >
     <div className="  shadow-2xl px-10 rounded-3xl py-5   item   pt-5 gap-y-10  flex flex-col h-[85vh] max-w-3xl mx-auto p-4">
 <h1 className="text-center text-[25px] bg-teal-600  px-4 w-auto py-1 text-white rounded-full  mx-auto  font-bold">Portfolio AI Assistant</h1>
       
-      <p className="text-center">Welcome to my portfolio assistant. You can explore my projects, technical skills, and experience by asking any questions about my work or development journey</p>{/* Me sages */}
+      <p className="text-center text-white">Welcome to my portfolio assistant. You can explore my projects, technical skills, and experience by asking any questions about my work or development journey</p>{/* Me sages */}
       <div
   ref={chatContainerRef}
   className="flex-1 overflow-y-auto space-y-3 p-3"
@@ -138,12 +138,13 @@ useEffect(() => {
     className="flex-1 min-w-0 border p-3 rounded-xl outline-none"
   />
 
-  <button
-    onClick={() => sendMessage(input)}
-    className="bg-green-950 text-white px-4 sm:px-5 py-3 rounded-xl whitespace-nowrap"
-  >
-    Send
-  </button>
+ <button
+  onClick={() => sendMessage(input)}
+  className="bg-green-950 text-white px-3 sm:px-5 py-3 rounded-xl"
+>
+  <span className="hidden sm:inline">Send</span>
+  <span className="sm:hidden">➤</span>
+</button>
 </div>
     </div>
     </section>

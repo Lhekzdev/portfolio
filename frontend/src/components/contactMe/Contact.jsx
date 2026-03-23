@@ -54,7 +54,7 @@ const Contact =()=>{
 
      return (
 
-      <section id="contact" className="bg-[hsl(172,90%,69%)]  py-6   ">
+      <section id="contact" className=" bg-gradient-to-bl text-slate-300 bg-zinc-500 py-6   ">
             <div className="px-10  ">
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-xl mx-auto  p-6 rounded-3xl shadow-2xl   space-y-4">
       <h2 className="text-2xl font-semibold mb-4 text-center">Contact Me</h2>

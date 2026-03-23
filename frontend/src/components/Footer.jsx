@@ -5,7 +5,7 @@ const Footer = () => {
 
   const navigate =useNavigate()
   return (
-    <footer className="bg-green-950 h-auto text-gray-300  py-6">
+    <footer className=" text-white bg-zinc-500  py-6">
       <div className="max-w-6xl mx-auto px-4 text-center flex-row   items-center justify-between">
         
    

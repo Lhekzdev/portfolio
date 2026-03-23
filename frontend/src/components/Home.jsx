@@ -12,7 +12,7 @@ import WordPreview from "./projects/Display"
 const Home = ({ darkMode }) => {
 
 
- const text = `I design and build scalable, responsive web applications that solve real-world problems and deliver seamless user experiences. With strong expertise in frontend development and solid backend capabilities, I develop complete end-to-end solutions including API integration, authentication systems, and database management. Passionate about clean architecture, performance, and intuitive UI/UX, I collaborate effectively to turn ideas into production-ready applications.`;
+  const text = `I design and build scalable, responsive web applications that solve real-world problems and deliver seamless user experiences. With strong expertise in frontend development and solid backend capabilities, I develop complete end-to-end solutions including API integration, authentication systems, and database management. Passionate about clean architecture, performance, and intuitive UI/UX, I collaborate effectively to turn ideas into production-ready applications.`;
 
 
 
@@ -60,17 +60,17 @@ const Home = ({ darkMode }) => {
           <p className={`${darkMode ? "text-red-950" : "text-red-900"} text-lg mt-4 font-semibold pl-5`}> Full Stack Developer | Frontend-Focused </p>
           <p className="mb-5 pl-5 text-justify font-cursive " id="text">
             {/* <WordPreview /> */} </p>
-       
-<div className="text-justify font-cursive">
-  {/* Handwriting Name */}
+
+          <div className="text-justify font-cursive">
+            {/* Handwriting Name */}
 
 
 
-  {/* Paragraph typing */}
-  <WordPreview />
-</div>
+            {/* Paragraph typing */}
+            <WordPreview />
+          </div>
 
-         
+
 
 
           <a href="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1758149762/Aduraleke-olaseinde_tech_cv_ygbjhz.pdf" className="text-center ml-5  px-5 mt-5 border rounded-md text-red-900" download="My_CV.pdf">
@@ -100,7 +100,12 @@ const Home = ({ darkMode }) => {
 
 
                     <h3 className="font-bold pb-3">{img.heading}</h3>
-                    <img src={baseUrl + img.name} className="bg-gray-100 border w-full h-[150px] border-gray-500" alt="" />
+                    <motion.img src={baseUrl + img.name} className="bg-gray-100 border w-full h-[150px] border-gray-500" alt="project-img"
+                     initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.8, delay: i * 0.2 }}
+  viewport={{ once: false }}
+                    />
 
 
 
@@ -141,7 +146,12 @@ const Home = ({ darkMode }) => {
       <div className=" hidden rounded-lg mt-7  lg:flex lg:px-10  lg:pt-28 lg:h-[50vw]">
 
 
-        <img className="rounded-2xl" src="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1761322290/Screenshot_2025-10-24_170946_sowzij.png" alt="" />
+        <motion.img className="rounded-2xl" src="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1761322290/Screenshot_2025-10-24_170946_sowzij.png" alt="img"
+           initial={{ opacity: 0, x: -80 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: false }}
+        />
       </div>
       <svg className="absolute  bottom-0 left-0 w-full" viewBox="0 0 100 10" preserveAspectRatio="none">
         <path d="M0,0 Q50,10 100,0 L100,19 L0,10 Z"

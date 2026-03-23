@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
 
@@ -31,7 +31,7 @@ const [showMoreTwo, setShowMoreTwo] = useState(false);
 
   return (
 
-    <section className=" h-auto bg-gradient-to-r  px-10  py-10 bg-[hsl(172,90%,69%)] p-6 rounded shadow " >
+    <section className=" h-auto bg-gradient-to-r  px-10  py-10 bg-slate-600 p-6 rounded shadow " >
 
       <div className="rounded-lg flex border flex-col  gap-y-5 shadow-2xl "  >
 
@@ -44,12 +44,19 @@ const [showMoreTwo, setShowMoreTwo] = useState(false);
               key={i}
               className="relative   w-full  flex items-center justify-center bg-gray-100 rounded-md overflow-hidden group"
             >
-              <img
+              <motion.img
                 loading="lazy"
                 src={baseUrl + img.name}
                 alt={`img-${i}`}
                 className="h-full w-full object-contain p-1"
-              />
+                 
+                    initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.8, delay: i * 0.2 }}
+  viewport={{ once: false }}
+                    />
+              
+              
 
               {/* Text overlay (appears on hover) */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
@@ -68,10 +75,10 @@ const [showMoreTwo, setShowMoreTwo] = useState(false);
           More about my projects </h1>
         <div className=" w-full flex flex-col md:flex-row gap-y-4 md:gap-x-5 px-10 md:flex">
           <div className="md:w-[50%]">
-            <h2 className="font-bold">💼 Senior Frontend Developer | May 2024 </h2>
+            <h2 className="font-bold text-white">💼 Senior Frontend Developer | May 2024 </h2>
       
                   
-                  <div className="md:max-full md:flex md:flex-col md:gap-y-5">
+                  <div className="md:max-full text-white md:flex md:flex-col md:gap-y-5">
 
               <p>Built a fully responsive, high-performance portfolio website designed to showcase my work and allow direct communication between users (including recruiters and potential employers) and myself through a real-time messaging system.</p>
               <div className="px-5">
@@ -134,11 +141,11 @@ const [showMoreTwo, setShowMoreTwo] = useState(false);
 
 
  <div className="md:w-[50%]">
-  <h2 className="font-bold">
+  <h2 className="font-bold text-white">
     💼 Frontend Developer | July 2024 – Dec. 2025
   </h2>
 
-  <div className="md:max-w-full md:flex md:flex-col md:gap-y-5">
+  <div className="md:max-w-full text-white md:flex md:flex-col md:gap-y-5">
 
     <p>
       This application is an event management and ticketing platform that allows users to create events, browse available events, and purchase or reserve tickets...
