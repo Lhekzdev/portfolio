@@ -30,7 +30,7 @@ useEffect(() => {
 
   setLoading(true);
 
-  const res = await fetch("http://localhost:5000/api/chat-stream", {
+  const res = await fetch("https://portfolio-zza1.onrender.com/api/chat-stream", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -89,7 +89,7 @@ useEffect(() => {
 };
   return (
     <section  className="bg-slate-500   px-10 shadow-xl  py-10 h-auto" >
-    <div className="  shadow-2xl px-10 rounded-3xl py-5   item   pt-5 gap-y-10  flex flex-col h-[85vh] max-w-3xl mx-auto p-4">
+    <div className="  shadow-2xl px-10 rounded-3xl py-5      pt-5 gap-y-10  flex flex-col  md:h-[85vh] max-w-3xl mx-auto p-4">
 <h1 className="text-center text-[25px] bg-teal-600  px-4 w-auto py-1 text-white rounded-full  mx-auto  font-bold">Portfolio AI Assistant</h1>
       
       <p className="text-center text-white">Welcome to my portfolio assistant. You can explore my projects, technical skills, and experience by asking any questions about my work or development journey</p>{/* Me sages */}
@@ -106,7 +106,7 @@ useEffect(() => {
             }`}
           >
             <div
-              className={`px-4 py-2 rounded-2xl max-w-[70%] text-sm shadow-md ${
+              className={`px-4 py-2 rounded-2xl h-auto max-w-[70%] text-sm shadow-md ${
                 msg.role === "user"
                   ? "bg-teal-600 text-white"
                   : "bg-gray-200 text-black"
