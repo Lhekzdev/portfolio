@@ -44,7 +44,7 @@ const Home = ({ darkMode }) => {
     portfolioRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <section className="w-full bg-gradient-to-r flex items justify-between from-[hsl(172,90%,69%)] to-[#02c3bd] h-auto relative ">
+    <section className="w-full bg-gradient-to-r flex items justify-between bg-teal-600 h-auto relative ">
 
       {/* <div className="items-center flex pr-10" > */}
       <div className=" border  lg:max-w-[55%]  ">
@@ -57,11 +57,11 @@ const Home = ({ darkMode }) => {
                [text-shadow:_2px_2px_0_#00c6a9]" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             Hi, I'm <br /> Olaseinde Aduraleke Samuel
           </motion.h2>
-          <p className={`${darkMode ? "text-red-950" : "text-red-900"} text-lg mt-4 font-semibold pl-5`}> Full Stack Developer | Frontend-Focused </p>
-          <p className="mb-5 pl-5 text-justify font-cursive " id="text">
+          <p className={`${darkMode ? "text-red-950" : "text-"} text-lg mt-4 font-bold pl-5`}> Full Stack Developer | Frontend-Focused </p>
+          <p className="mb-5 text-white pl-5 text-justify font-cursive " id="text">
             {/* <WordPreview /> */} </p>
 
-          <div className="text-justify font-cursive">
+          <div className="text-justify  font-semibold font-cursive">
             {/* Handwriting Name */}
 
 
@@ -73,10 +73,7 @@ const Home = ({ darkMode }) => {
 
 
 
-          <a href="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1758149762/Aduraleke-olaseinde_tech_cv_ygbjhz.pdf" className="text-center ml-5  px-5 mt-5 border rounded-md text-red-900" download="My_CV.pdf">
-            Download My CV
-          </a>
-
+         
 
           <div className="  p-10">
             <h2 className="text-2xl font-bold mb-4">Projects</h2>

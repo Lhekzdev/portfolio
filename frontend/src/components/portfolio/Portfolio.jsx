@@ -33,7 +33,7 @@ const [showMoreTwo, setShowMoreTwo] = useState(false);
 
     <section className=" h-auto bg-gradient-to-r  px-10  py-10 bg-slate-600 p-6 rounded shadow " >
 
-      <div className="rounded-lg flex border flex-col  gap-y-5 shadow-2xl "  >
+      <div className="rounded-lg flex border flex-col pb-5 gap-y-5 shadow-2xl "  >
 
         <div className="text-[25px] mx-auto bg-teal-600 rounded-full   w-auto px-5 py-2 mt-3 ">
           <h2 className=" text-white text-center items-center   font-bold">Portfolio</h2>
@@ -94,7 +94,7 @@ transition={{ duration: 0.8, delay: i * 0.2 }}
             {!showMore && (
     <button
       onClick={() => setShowMore(true)}
-        className="text-white bg-green-950 px-3 py-1 rounded-2xl font-semibold mt-2"
+        className="text-white bg-green-950 px-3 py-1 rounded-2xl font-normal mt-2"
     >
       See more
     </button>
@@ -125,7 +125,7 @@ transition={{ duration: 0.8, delay: i * 0.2 }}
 
                      <button
         onClick={() => setShowMore(false)}
-       className="text-white bg-teal-600 px-3 py-1 rounded-2xl font-semibold mt-2"
+       className="text-white bg-teal-600 px-3 py-1 rounded-2xl font-normal mt-2"
       >
         See less
       </button>
@@ -166,7 +166,7 @@ transition={{ duration: 0.8, delay: i * 0.2 }}
       {!showMore && (
         <button
           onClick={() => setShowMore(true)}
-            className="text-white bg-green-950 px-3 py-1 rounded-2xl font-semibold mt-2"
+            className="text-white bg-green-950 px-3 py-1 rounded-2xl font-normal mt-2"
     
         >
           See more
@@ -195,7 +195,7 @@ transition={{ duration: 0.8, delay: i * 0.2 }}
         {/* ✅ FIXED SEE LESS */}
         <button
           onClick={() => setShowMore(false)}
-          className="text-white bg-teal-600 px-3 py-1 rounded-2xl font-semibold mt-2"
+          className="text-white bg-teal-600 px-3 py-1 rounded-2xl font-normal mt-2"
         >
           See less
         </button>
@@ -213,9 +213,21 @@ transition={{ duration: 0.8, delay: i * 0.2 }}
 
        
         </div>
-<div className="text-center mx-10 px-10 py-5 bg-teal-600 text-white rounded-xl">
-    <p>To see more of my projects kindly downoload my CV, other details *gitHub link, linkedIn, * can be found in the footer section. A direct message can also be sent via the contact me section </p>
-  </div>
+
+
+  <div className="text-center mx-10 px-10 py-5 bg-teal-600 text-white rounded-xl">
+  <p>
+    To see more of my projects kindly{" "}
+    <a
+      href="https://res.cloudinary.com/dzyvwxh7n/image/upload/v1758149762/Aduraleke-olaseinde_tech_cv_ygbjhz.pdf"
+      className="inline-block mx-2 px-4 py-1 border rounded-md text-red-900 bg-white hover:bg-gray-100 transition"
+    >
+      Download My CV
+    </a>
+    , other details (GitHub link, LinkedIn, etc.) can be found in the footer
+    section. A direct message can also be sent via the contact me section.
+  </p>
+</div>
       </div>
  
     </section>

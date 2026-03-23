@@ -3,16 +3,16 @@ import React from "react";
 const Experience = () => {
 
     return (
-        <section className="bg-gray-400    px-10 shadow-xl  py-10 h-auto  ">
-            <div className=" shadow-2xl px-10 rounded-3xl py-5 flex flex-col  item   pt-5 gap-y-10">
-                <h2 className="text-center text-[25px] bg-teal-600  w-[250px] py-1 text-white rounded-full  mx-auto  font-bold">Work Experience</h2>
+        <section className=" bg-zinc-300   md:bg-gray-400  px-10 shadow-xl  py-10 h-auto  ">
+            <div className=" shadow-2xl rounded-t-full lg:rounded-t-3xl bg-gray-400  md:pt-20 px-10 rounded-3xl py-5 flex flex-col  item   pt-10 gap-y-10">
+                <h2 className="text-center text-[25px] bg-teal-600  md:w-[250px] py-1 text-white rounded-full  mx-auto px-5 md:px-0font-bold">Work Experience</h2>
                 <div className=" md:grid md:gap-x-10 gap-y-10 flex flex-col  grid-cols-2 ">
                     <div className=" flex flex-col w-full  gap-y-6  ">
 
-                        <p className="font-bold">
+                        <p className="font-bold text-green-950 ">
                             Alvent ( Event and Ticketing ) |Frontend Developer |July 2024 – Dec. 2025
                         </p>
-                        <ul className="list-disc pl-5">
+                        <ul className="list-disc text-green-950  pl-5">
                             <li>Designed and implemented responsive UI components for an event and ticketing
                                 platform using React and CSS/SCSS.</li>
                             <li>Developed dynamic forms for event creation, ticket booking, and user registration
@@ -29,11 +29,11 @@ const Experience = () => {
                     </div>
 
 
-                    <div className="w-full h-auto">
+                    <div className="w-full text-green-950 h-auto">
 
                         <p className="font-bold">SkillZonet ( Artisans Search platform ) |Backend Developer |Dec 2025 – current</p>
 
-                        <ul className="list-disc pl-5">
+                        <ul className="list-disc text-green-950 pl-5">
 
                             <li>Architected and developed a scalable backend system using Node.js, Express, and
                                 TypeScript, exposing REST and GraphQL APIs.</li>
@@ -55,7 +55,7 @@ const Experience = () => {
 
                 <div className=" flex flex-col  ">
                     <h2 className="text-center text-[25px]  bg-teal-600    w-[200px] py-1 text-white rounded-full mx-auto mb-10 font-bold">Education</h2>
-                    <div className=" flex flex-col md:gap-x-10 gap-y-6 md:grid grid-cols-2 border-b-2 " >
+                    <div className=" text-green-950 flex flex-col md:gap-x-10 gap-y-6 md:grid grid-cols-2 border-b-2 " >
                         <div className="w-full h-auto">
                             <span className="font-bold">First degree: </span><p>  B.Sc. (Ed.) in Agric-Sci. & Edu </p>
 
@@ -70,7 +70,7 @@ const Experience = () => {
                     </div>
                 </div>
                 {/*  */}
-                <div>
+                <div className="text-green-950">
                     <h4 className="font-bold">Certifications</h4>
                     <ul className="list-disc pl-5">
                         <li>careerEx frontend cert.</li>
@@ -84,7 +84,7 @@ const Experience = () => {
 
                 </div>
 
-                <div >
+                <div className="text-green-950" >
                     <h4 className="font-bold"> Online Courses</h4>
                     <p>Full-Stack web development Bootcamp</p>
                     <p>Complete React Developer(Redux,Hooks, GraphQL)</p>
