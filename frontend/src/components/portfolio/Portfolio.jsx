@@ -73,18 +73,18 @@ transition={{ duration: 0.8, delay: i * 0.2 }}
         <h1  className=" px-5 text-white md:text-xl text-center bg-teal-600 mx-auto   py-3 my-4 rounded-2xl font-semibold mt-2">
           
           More about my projects </h1>
-        <div className=" w-full flex flex-col md:flex-row gap-y-4 md:gap-x-5 px-10 md:flex">
-          <div className="md:w-[50%]">
+        <div className=" max-w-full flex flex-col md:flex-row gap-y-4 md:gap-x-5 pl-6 pr-2 md:flex">
+          <div className="md:w-[50%] ">
             <h2 className="font-bold text-white">💼 Senior Frontend Developer | May 2024 </h2>
       
                   
-                  <div className="md:max-full text-white md:flex md:flex-col md:gap-y-5">
+                  <div className="max-w-full text-white md:flex md:flex-col md:gap-y-5">
 
               <p>Built a fully responsive, high-performance portfolio website designed to showcase my work and allow direct communication between users (including recruiters and potential employers) and myself through a real-time messaging system.</p>
-              <div className="px-5">
-                <h1 className="font-bold">✨ UI / UX Features</h1>
+              <div className="md:px-5 ">
+                <h1 className="font-bold py-3 md:py-0">✨ UI / UX Features</h1>
                 
-                    <ul className="list-disc pl-5 space-y-1">
+                    <ul className="list-disc  space-y-1">
                 <li>Modern responsive design optimized for all screen sizes (mobile, tablet, desktop) </li>
                 <li>Smooth page transitions and animations using Framer Motion</li>
                 <li>Interactive AI-powered chat assistant for portfolio inquiries</li>
@@ -151,10 +151,10 @@ transition={{ duration: 0.8, delay: i * 0.2 }}
       This application is an event management and ticketing platform that allows users to create events, browse available events, and purchase or reserve tickets...
     </p>
 
-    <div className="px-5">
-      <h1 className="font-bold">✨ UI / UX Features</h1>
+    <div className="">
+      <h1 className="font-bold py-3 md:py-0" >✨ UI / UX Features</h1>
 
-      <ul className="list-disc pl-5 space-y-1">
+      <ul className="list-disc md:pl-5 space-y-1">
         <li>Designed and implemented responsive UI components...</li>
         <li>Developed dynamic forms for event creation...</li>
         <li>Implemented state management...</li>
@@ -215,7 +215,7 @@ transition={{ duration: 0.8, delay: i * 0.2 }}
         </div>
 
 
-  <div className="text-center mx-10 px-10 py-5 bg-teal-600 text-white rounded-xl">
+  <div className="text-center md:mx-10 mx-2 md:px-10 py-5 bg-teal-600 text-white rounded-xl">
   <p>
     To see more of my projects kindly{" "}
     <a

@@ -77,7 +77,7 @@ const Skills = () => {
         <Card>
         <i className="devicon-figma-plain colored"></i>
         <h4 className="text-xl font-bold mt-2">Figma</h4>
-       < p className="text-center font-normal md:max-w-48 text-[15px]"> I used Figma to design modern and user-friendly interfaces, then converted those designs into fully functional web pages.</p>
+       < p className="text-center font-normal  md:max-w-48 text-[15px]"> I used Figma to design modern and user-friendly interfaces, then converted those designs into fully functional web pages.</p>
    </Card>
 
       {/* Sass */}
