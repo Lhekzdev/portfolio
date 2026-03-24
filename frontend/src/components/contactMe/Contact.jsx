@@ -54,37 +54,37 @@ const Contact =()=>{
 
      return (
 
-      <section id="contact" className=" bg-gradient-to-bl text-slate-300 bg-zinc-500 py-6   ">
+      <section id="contact" className=" bg-gradient-to-bl  bg-zinc-500 py-6   ">
             <div className="px-10  ">
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-xl mx-auto  p-6 rounded-3xl shadow-2xl   space-y-4">
-      <h2 className="text-2xl font-semibold mb-4 text-center">Contact Me</h2>
+      <h2 className="text-2xl font-semibold text-slate-300 mb-4 text-center">Contact Me</h2>
 
       <div className=" ">
-        <label className="block text-sm font-medium">Name</label>
+        <label className="block text-slate-300 text-sm font-medium">Name</label>
         <input
           {...register("name")}
           type="text"
-          className="w-full p-2 border  border-teal-800 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 border  border-teal-800 rounded focus:outline-none focus:ring-2 focus:ring-emerald-900"
         />
         {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
       </div>
 
       <div>
-        <label className="block text-sm font-medium">Email</label>
+        <label className="block text-slate-300 text-sm font-medium">Email</label>
         <input
           {...register("email")}
           type="email"
-          className="w-full p-2 border border-teal-800 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 border border-teal-800 rounded focus:outline-none focus:ring-2 focus:ring-emerald-900"
         />
         {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
       </div>
 
       <div >
-        <label className="block text-sm font-medium">Message</label>
+        <label className="block text-sm text-slate-300 font-medium">Message</label>
         <textarea
           {...register("message")}
           rows={5}
-          className="w-full p-2 border-teal-800 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 border-teal-800 border rounded focus:outline-none focus:ring-2 focus:ring-emerald-900"
         ></textarea>
         {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
       </div>
