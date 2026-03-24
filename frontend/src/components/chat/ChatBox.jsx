@@ -2,6 +2,13 @@ import { useState, useRef, useEffect } from "react";
 
 export default function ChatPage() {
 
+  let sessionId = localStorage.getItem("sessionId");
+
+if (!sessionId) {
+  sessionId = crypto.randomUUID();
+  localStorage.setItem("sessionId", sessionId);
+}
+
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -21,71 +28,77 @@ useEffect(() => {
 
   setInput("");
 
-  // 1. Add user message immediately
   setMessages((prev) => [
     ...prev,
     { role: "user", text: message },
-    { role: "assistant", text: "" }, // 🔥 IMPORTANT PLACEHOLDER
+    { role: "assistant", text: "" },
   ]);
 
   setLoading(true);
 
-  const res = await fetch("https://portfolio-zza1.onrender.com/api/chat-stream", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ message }),
-  });
+  try {
+    const baseUrl = "https://portfolio-zza1.onrender.com/"; // 🔥 CHANGE THIS
 
-  const reader = res.body.getReader();
-  const decoder = new TextDecoder("utf-8");
+    const res = await fetch(`${baseUrl}/api/chat-stream`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message,
+        sessionId,
+      }),
+    });
 
-  let text = "";
+    if (!res.ok) {
+      console.error("Server error:", res.status);
+      setLoading(false);
+      return;
+    }
 
-  while (true) {
-    const { value, done } = await reader.read();
-    if (done) break;
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder("utf-8");
 
-    const chunk = decoder.decode(value, { stream: true });
-    const lines = chunk.split("\n");
+    let text = "";
 
-    for (let line of lines) {
-      if (line.startsWith("data: ")) {
-        const json = line.replace("data: ", "");
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
 
-        if (json.includes("[DONE]")) {
-          setLoading(false);
-          return;
-        }
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = chunk.split("\n");
 
-        try {
-          const { token } = JSON.parse(json);
+      for (let line of lines) {
+        if (line.startsWith("data: ")) {
+          const json = line.replace("data: ", "");
 
-          if (token) {
-            text += token;
-
-            // 🔥 UPDATE LAST MESSAGE (assistant)
-            setMessages((prev) => {
-              const updated = [...prev];
-              const lastIndex = updated.length - 1;
-
-              updated[lastIndex] = {
-                ...updated[lastIndex],
-                text,
-              };
-
-              return updated;
-            });
+          if (json.includes("[DONE]")) {
+            setLoading(false);
+            return;
           }
-        } catch (e) {
-          // ignore bad chunks
+
+          try {
+            const { token } = JSON.parse(json);
+
+            if (token) {
+              text += token;
+
+              setMessages((prev) => {
+                const updated = [...prev];
+                updated[updated.length - 1].text = text;
+                return updated;
+              });
+            }
+          } catch {}
         }
       }
     }
-  }
 
-  setLoading(false);
+    setLoading(false);
+  } catch (err) {
+    console.error(err);
+    setLoading(false);
+  }
 };
   return (
     <section  className="bg-slate-500   px-10 shadow-xl  py-10 h-auto" >
@@ -126,7 +139,7 @@ useEffect(() => {
           </div>
         )}
 
-        <div ref={chatContainerRef} />
+        <div  />
       </div>
 
       {/* Input box */}
