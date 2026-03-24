@@ -37,7 +37,7 @@ useEffect(() => {
   setLoading(true);
 
   try {
-    const baseUrl = "https://portfolio-zza1.onrender.com/"; // 🔥 CHANGE THIS
+    const baseUrl = "https://portfolio-zza1.onrender.com"; // 🔥 CHANGE THIS
 
     const res = await fetch(`${baseUrl}/api/chat-stream`, {
       method: "POST",
