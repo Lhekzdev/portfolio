@@ -1,83 +1,33 @@
-// export const ChatMessage = async (req, res) => {
-//   try {
-//     console.log("API KEY:", process.env.GROQ_API_KEY);
-
-//     const { message } = req.body;
-
-//     const response = await fetch(
-//       "https://api.groq.com/openai/v1/chat/completions",
-//       {
-//         method: "POST",
-//         headers: {
-//           Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({
-//     model: "llama-3.3-70b-versatile",
-//           messages: [{ role: "user", content: message }],
-//         }),
-//       }
-//     );
-
-//     const text = await response.text();
-//     console.log("🔥 RAW RESPONSE:", text);
-
-//     let data;
-//     try {
-//       data = JSON.parse(text);
-//     } catch {
-//       return res.json({ reply: "Invalid JSON response" });
-//     }
-
-//     if (!response.ok) {
-//       return res.json({
-//         reply: data?.error?.message || "Groq error",
-//       });
-//     }
-
-//     const reply = data?.choices?.[0]?.message?.content;
-
-//     res.json({
-//       reply: reply || "Empty response from AI",
-//     });
-
-//   } catch (err) {
-//     console.error("🔥 ERROR:", err);
-//     res.json({ reply: "Server crashed" });
-//   }
-// };
-
-
-// export const ChatMessage = async (req, res) => {
-//   try {
-//     const response = await fetch("https://api.groq.com/openai/v1/models", {
-//       headers: {
-//         Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
-//       },
-//     });
-
-//     const data = await response.json();
-
-//     console.log("🔥 MODELS:", data);
-
-//     res.json({ reply: "Check your terminal for available models" });
-
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ error: err.message });
-//   }
-// };
+import { Chat } from "../models/chatModel.js";
 
 export const ChatStream = async (req, res) => {
   try {
-    const { message } = req.body;
+    const { message, sessionId } = req.body;
 
-    // 1. SSE HEADERS (IMPORTANT)
-    res.setHeader("Content-Type", "text/event-stream");
-    res.setHeader("Cache-Control", "no-cache");
-    res.setHeader("Connection", "keep-alive");
+    // 🔹 Find or create chat
+    let chat = await Chat.findOne({ sessionId });
 
-    // 2. CALL GROQ STREAM API
+    if (!chat) {
+      chat = new Chat({
+        sessionId,
+        messages: [],
+      });
+    }
+
+    // 🔹 Save USER message
+    chat.messages.push({
+      role: "user",
+      content: message,
+    });
+
+    const lastMessages = chat.messages
+  .slice(-10)
+  .map(msg => ({
+    role: msg.role,
+    content: msg.content
+  }));
+
+    // 🔥 CALL GROQ FIRST (before streaming)
     const response = await fetch(
       "https://api.groq.com/openai/v1/chat/completions",
       {
@@ -94,12 +44,33 @@ export const ChatStream = async (req, res) => {
               content:
                 "You are a helpful AI assistant inside a developer portfolio.",
             },
-            { role: "user", content: message },
+            ...lastMessages,
           ],
-          stream: true, // 🔥 IMPORTANT
+          stream: true,
         }),
       }
     );
+
+    // ✅ HANDLE ERROR BEFORE STREAMING
+    if (!response.ok) {
+  const errorText = await response.text();
+  console.error("🔥 Groq REAL ERROR:", errorText);
+
+  return res.status(response.status).json({
+    error: errorText
+  });
+}
+
+    if (!response.body) {
+      return res.status(500).json({ error: "No response stream" });
+    }
+
+    // 🔥 START STREAMING AFTER SUCCESS
+    res.setHeader("Content-Type", "text/event-stream");
+    res.setHeader("Cache-Control", "no-cache");
+    res.setHeader("Connection", "keep-alive");
+
+    res.flushHeaders?.();
 
     const reader = response.body.getReader();
     const decoder = new TextDecoder("utf-8");
@@ -111,8 +82,6 @@ export const ChatStream = async (req, res) => {
       if (done) break;
 
       const chunk = decoder.decode(value, { stream: true });
-
-      // Groq sends: data: {...}
       const lines = chunk.split("\n");
 
       for (let line of lines) {
@@ -120,6 +89,16 @@ export const ChatStream = async (req, res) => {
           const json = line.replace("data: ", "");
 
           if (json === "[DONE]") {
+            // 🔥 Save AI response
+            chat.messages.push({
+              role: "assistant",
+              content: fullText,
+            });
+
+            chat.messages = chat.messages.slice(-20);
+
+            await chat.save();
+
             res.write(`data: [DONE]\n\n`);
             res.end();
             return;
@@ -127,18 +106,13 @@ export const ChatStream = async (req, res) => {
 
           try {
             const parsed = JSON.parse(json);
-
             const token = parsed?.choices?.[0]?.delta?.content;
 
             if (token) {
               fullText += token;
-
-              // 🔥 STREAM TOKEN TO FRONTEND
               res.write(`data: ${JSON.stringify({ token })}\n\n`);
             }
-          } catch (err) {
-            // ignore parsing errors
-          }
+          } catch {}
         }
       }
     }
@@ -146,6 +120,11 @@ export const ChatStream = async (req, res) => {
     res.end();
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: err.message });
+
+    if (res.headersSent) {
+      res.end();
+    } else {
+      res.status(500).json({ error: err.message });
+    }
   }
 };

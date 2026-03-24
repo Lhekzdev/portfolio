@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const chatSchema = new mongoose.Schema({
-  userId: String,
+  sessionId: String,
   messages: [
     {
       role: String,
